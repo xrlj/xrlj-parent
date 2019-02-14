@@ -27,6 +27,8 @@
         <maven.compiler.target>1.8</maven.compiler.target>
 
         <nexus.url>http://119.145.41.171:8085</nexus.url>
+
+        <xrlj-java-utils.version>0.0.1</xrlj-java-utils.version>
     </properties>
 
     <dependencies>
@@ -41,6 +43,11 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>com.xrlj</groupId>
+            <artifactId>xrlj-java-utils</artifactId>
+            <version>${xrlj-java-utils.version}</version>
+        </dependency>
     </dependencies>
 
     <dependencyManagement>
