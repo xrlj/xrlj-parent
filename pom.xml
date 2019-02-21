@@ -29,6 +29,9 @@
         <nexus.url>http://119.145.41.171:8085</nexus.url>
 
         <xrlj-java-utils.version>0.0.1</xrlj-java-utils.version>
+
+        <!--app service docker注册前缀-->
+        <docker.image.prefix>xrlj</docker.image.prefix>
     </properties>
 
     <dependencies>
