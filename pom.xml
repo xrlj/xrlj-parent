@@ -26,7 +26,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
 
-        <nexus.url>http://119.145.41.171:8085</nexus.url>
+        <nexus.url>http://120.79.2.30:8081</nexus.url>
 
         <xrlj-java-utils.version>0.0.1</xrlj-java-utils.version>
 
