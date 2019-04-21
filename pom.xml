@@ -33,6 +33,7 @@
         <xrlj-java-utils.version>0.0.1</xrlj-java-utils.version>
 
         <!--app service docker注册前缀-->
+        <docker.image.url>${nexus.host}:8082</docker.image.url>
         <docker.image.prefix>xrlj</docker.image.prefix>
     </properties>
 
