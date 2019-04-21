@@ -4,7 +4,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.2.RELEASE</version>
+        <version>2.1.4.RELEASE</version>
         <relativePath/><!-- lookup parent from repository -->
     </parent>
     <groupId>com.xrlj</groupId>
@@ -20,12 +20,14 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
+        <spring-cloud.version>Greenwich.SR1</spring-cloud.version>
 
         <!--防止maven改动IDE的language level -->
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
 
+        <nexus.host>120.79.2.30</nexus.host>
+        <nexus.port>8081</nexus.port>
         <nexus.url>http://120.79.2.30:8081</nexus.url>
 
         <xrlj-java-utils.version>0.0.1</xrlj-java-utils.version>
