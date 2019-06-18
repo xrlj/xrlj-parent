@@ -67,11 +67,6 @@
             <artifactId>xrlj-java-utils</artifactId>
             <version>${xrlj-java-utils.version}</version>
         </dependency>
-        <dependency>
-            <groupId>com.xrlj</groupId>
-            <artifactId>xrlj-infrastructure</artifactId>
-            <version>${xrlj-infrastructure.version}</version>
-        </dependency>
     </dependencies>
 
     <dependencyManagement>
@@ -97,6 +92,12 @@
                 <groupId>com.xrlj</groupId>
                 <artifactId>xrlj-framework</artifactId>
                 <version>${xrlj-framework.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.xrlj</groupId>
+                <artifactId>xrlj-infrastructure</artifactId>
+                <version>${xrlj-infrastructure.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
