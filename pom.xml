@@ -32,6 +32,7 @@
 
         <xrlj-java-utils.version>0.0.1</xrlj-java-utils.version>
         <xrlj-infrastructure.version>0.0.1</xrlj-infrastructure.version>
+        <xrlj-framework.version>0.0.1</xrlj-framework.version>
 
         <!--app service docker注册前缀-->
         <docker.image.url>${nexus.host}:8082</docker.image.url>
@@ -90,6 +91,12 @@
                 <version>0.0.1</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.xrlj</groupId>
+                <artifactId>xrlj-framework</artifactId>
+                <version>${xrlj-framework.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
