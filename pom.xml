@@ -30,7 +30,7 @@
         <nexus.port>8081</nexus.port>
         <nexus.url>http://120.79.2.30:8081</nexus.url>
 
-        <xrlj-java-utils.version>0.0.1</xrlj-java-utils.version>
+        <xrlj-java-utils.version>0.0.1-SNAPSHOT</xrlj-java-utils.version>
         <xrlj-infrastructure.version>0.0.1-SNAPSHOT</xrlj-infrastructure.version>
         <xrlj-framework.version>0.0.1-SNAPSHOT</xrlj-framework.version>
         <xrlj-configuration-ds.version>0.0.1-SNAPSHOT</xrlj-configuration-ds.version>
