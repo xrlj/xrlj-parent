@@ -19,17 +19,19 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>1.8</java.version>
-        <spring-cloud.version>Greenwich.SR2</spring-cloud.version>
-
+        <java.version>11</java.version>
         <!--防止maven改动IDE的language level -->
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+
+        <!--spring-cloud版本-->
+        <spring-cloud.version>Greenwich.SR2</spring-cloud.version>
 
         <nexus.host>120.79.2.30</nexus.host>
         <nexus.port>8081</nexus.port>
-        <nexus.url>http://120.79.2.30:8081</nexus.url>
+        <nexus.url>http://${nexus.host}:${nexus.port}</nexus.url>
 
+        <xrlj-dependencies.version>0.0.1-SNAPSHOT</xrlj-dependencies.version>
         <xrlj-java-utils.version>0.0.1-SNAPSHOT</xrlj-java-utils.version>
         <xrlj-infrastructure.version>0.0.1-SNAPSHOT</xrlj-infrastructure.version>
         <xrlj-framework.version>0.0.1-SNAPSHOT</xrlj-framework.version>
@@ -85,7 +87,7 @@
             <dependency>
                 <groupId>com.xrlj</groupId>
                 <artifactId>xrlj-dependencies</artifactId>
-                <version>0.0.1</version>
+                <version>${xrlj-dependencies.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
