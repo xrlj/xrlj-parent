@@ -34,6 +34,7 @@
         <xrlj-dependencies.version>0.0.1-SNAPSHOT</xrlj-dependencies.version>
         <xrlj-java-utils.version>0.0.1-SNAPSHOT</xrlj-java-utils.version>
         <xrlj-infrastructure.version>0.0.1-SNAPSHOT</xrlj-infrastructure.version>
+        <xrlj-codegen.version>0.0.1-SNAPSHOT</xrlj-codegen.version>
         <xrlj-framework.version>0.0.1-SNAPSHOT</xrlj-framework.version>
         <xrlj-configuration-ds.version>0.0.1-SNAPSHOT</xrlj-configuration-ds.version>
         <xrlj-configuration-web.version>0.0.1-SNAPSHOT</xrlj-configuration-web.version>
@@ -110,6 +111,12 @@
                 <groupId>com.xrlj</groupId>
                 <artifactId>xrlj-infrastructure</artifactId>
                 <version>${xrlj-infrastructure.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.xrlj</groupId>
+                <artifactId>xrlj-codegen</artifactId>
+                <version>${xrlj-codegen.version}</version>
             </dependency>
 
             <dependency>
