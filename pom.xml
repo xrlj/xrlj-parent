@@ -38,6 +38,7 @@
         <xrlj-framework.version>0.0.1-SNAPSHOT</xrlj-framework.version>
         <xrlj-configuration-ds.version>0.0.1-SNAPSHOT</xrlj-configuration-ds.version>
         <xrlj-configuration-web.version>0.0.1-SNAPSHOT</xrlj-configuration-web.version>
+        <feign-form.version>3.8.0</feign-form.version>
 
         <!--app service docker注册前缀-->
         <docker.image.url>${nexus.host}:8082</docker.image.url>
@@ -144,6 +145,17 @@
                         <artifactId>spring-boot-starter</artifactId>
                     </exclusion>
                 </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>io.github.openfeign.form</groupId>
+                <artifactId>feign-form</artifactId>
+                <version>${feign-form.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.openfeign.form</groupId>
+                <artifactId>feign-form-spring</artifactId>
+                <version>${feign-form.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
