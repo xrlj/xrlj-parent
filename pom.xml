@@ -39,6 +39,7 @@
         <xrlj-configuration-ds.version>0.0.1-SNAPSHOT</xrlj-configuration-ds.version>
         <xrlj-configuration-web.version>0.0.1-SNAPSHOT</xrlj-configuration-web.version>
         <feign-form.version>3.8.0</feign-form.version>
+        <logstash-logback-encoder.version>6.1</logstash-logback-encoder.version>
 
         <!--app service docker注册前缀-->
         <docker.image.url>${nexus.host}:8082</docker.image.url>
@@ -156,6 +157,13 @@
                 <groupId>io.github.openfeign.form</groupId>
                 <artifactId>feign-form-spring</artifactId>
                 <version>${feign-form.version}</version>
+            </dependency>
+
+            <!--必须要和logback版本对应，这个版本对应logback的1.2.3-->
+            <dependency>
+                <groupId>net.logstash.logback</groupId>
+                <artifactId>logstash-logback-encoder</artifactId>
+                <version>${logstash-logback-encoder.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
