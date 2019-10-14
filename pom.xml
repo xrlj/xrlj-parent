@@ -168,6 +168,33 @@
         </dependencies>
     </dependencyManagement>
 
+    <!-- 多环境配置 -->
+    <!-- 打包：mvn clean package -Pdev -U 或者 mvn clean package -DprofileActive=dev -U -->
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <activation>
+                <!-- Default Active Without Assign Parameter -->
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <profileActive>dev</profileActive>
+            </properties>
+        </profile>
+        <profile>
+            <id>test</id>
+            <properties>
+                <profileActive>test</profileActive>
+            </properties>
+        </profile>
+        <profile>
+            <id>prod</id>
+            <properties>
+                <profileActive>prod</profileActive>
+            </properties>
+        </profile>
+    </profiles>
+
     <build>
         <plugins>
             <plugin>
