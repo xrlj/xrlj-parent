@@ -27,7 +27,7 @@
         <!--spring-cloud版本-->
         <spring-cloud.version>Greenwich.SR3</spring-cloud.version>
 
-        <nexus.host>120.79.2.30</nexus.host>
+        <nexus.host>nexus-server</nexus.host>
         <nexus.port>8081</nexus.port>
         <nexus.url>http://${nexus.host}:${nexus.port}</nexus.url>
 
@@ -325,8 +325,8 @@
         </snapshotRepository>
         <repository>
             <id>repository</id>
-            <name>ymu-hosted</name>
-            <url>${nexus.url}/repository/ymu-hosted/</url>
+            <name>maven-releases</name>
+            <url>${nexus.url}/repository/maven-snapshots/</url>
         </repository>
     </distributionManagement>
 
