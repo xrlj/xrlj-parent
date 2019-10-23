@@ -27,7 +27,7 @@
         <!--spring-cloud版本-->
         <spring-cloud.version>Greenwich.SR3</spring-cloud.version>
 
-        <nexus.host>nexus-server</nexus.host>
+        <nexus.host>192.168.0.3</nexus.host>
         <nexus.port>8081</nexus.port>
         <nexus.url>http://${nexus.host}:${nexus.port}</nexus.url>
 
@@ -281,6 +281,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-dependency-plugin</artifactId>
+                    <version>3.1.1</version>
                     <executions>
                         <execution>
                             <id>unpack</id>
