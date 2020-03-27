@@ -27,7 +27,7 @@
         <!--spring-cloud版本-->
         <spring-cloud.version>Greenwich.SR3</spring-cloud.version>
 
-        <nexus.host>192.168.1.110</nexus.host>
+        <nexus.host>172.31.31.31</nexus.host>
         <nexus.port>8081</nexus.port>
         <nexus.url>http://${nexus.host}:8081</nexus.url>
 
