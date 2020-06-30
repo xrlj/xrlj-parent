@@ -16,6 +16,44 @@
         spring-cloud微服务架构
     </description>
 
+    <!-- 多环境配置 -->
+    <!-- 打包：mvn clean package -Pdev -U 或者 mvn clean package -DprofileActive=dev -U -->
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <activation>
+                <!-- 默认启动环境 -->
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <profileActive>dev</profileActive>
+                <nexus.host>172.31.31.31</nexus.host>
+            </properties>
+        </profile>
+        <profile>
+            <id>test</id>
+            <properties>
+                <profileActive>test</profileActive>
+                <nexus.host>192.168.0.3</nexus.host>
+            </properties>
+        </profile>
+        <profile>
+            <id>prod</id>
+            <properties>
+                <profileActive>prod</profileActive>
+                <nexus.host>192.168.0.3</nexus.host>
+            </properties>
+        </profile>
+        <!--其它临时环境-->
+        <profile>
+            <id>tmp</id>
+            <properties>
+                <profileActive>tmp</profileActive>
+                <nexus.host>192.168.0.3</nexus.host>
+            </properties>
+        </profile>
+    </profiles>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -27,7 +65,7 @@
         <!--spring-cloud版本-->
         <spring-cloud.version>Greenwich.SR3</spring-cloud.version>
 
-        <nexus.host>172.31.31.31</nexus.host>
+        <!--<nexus.host>192.168.0.3</nexus.host>-->
         <nexus.port>8081</nexus.port>
         <nexus.url>http://${nexus.host}:8081</nexus.url>
 
@@ -168,33 +206,6 @@
         </dependencies>
     </dependencyManagement>
 
-    <!-- 多环境配置 -->
-    <!-- 打包：mvn clean package -Pdev -U 或者 mvn clean package -DprofileActive=dev -U -->
-    <profiles>
-        <profile>
-            <id>dev</id>
-            <activation>
-                <!-- Default Active Without Assign Parameter -->
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <properties>
-                <profileActive>dev</profileActive>
-            </properties>
-        </profile>
-        <profile>
-            <id>test</id>
-            <properties>
-                <profileActive>test</profileActive>
-            </properties>
-        </profile>
-        <profile>
-            <id>prod</id>
-            <properties>
-                <profileActive>prod</profileActive>
-            </properties>
-        </profile>
-    </profiles>
-
     <build>
         <plugins>
             <plugin>
@@ -210,24 +221,11 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
                     <configuration>
-                        <fork>true</fork>
                         <maxmem>1024m</maxmem>
                         <meminitial>256m</meminitial>
                         <encoding>UTF-8</encoding>
                         <source>${java.version}</source>
                         <target>${java.version}</target>
-                        <debug>true</debug>
-                        <debuglevel>lines,vars,source</debuglevel>
-                        <!-- [#2413] Make compiler warnings a bit more visible But don't fail
-                            (yet) -->
-                        <compilerArgs>
-                            <arg>-Xlint:varargs</arg>
-                        </compilerArgs>
-                        <!--不打包下面文件-->
-                        <!--<excludes>
-                            <exclude>**/simsun.ttc</exclude>
-                            <exclude>**/wkhtmltopdf</exclude>
-                        </excludes>-->
                     </configuration>
                 </plugin>
 
