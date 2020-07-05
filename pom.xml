@@ -46,9 +46,9 @@
         </profile>
         <!--其它临时环境-->
         <profile>
-            <id>tmp</id>
+            <id>local</id>
             <properties>
-                <profileActive>tmp</profileActive>
+                <profileActive>local</profileActive>
                 <nexus.host>192.168.0.3</nexus.host>
             </properties>
         </profile>
