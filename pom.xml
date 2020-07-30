@@ -28,6 +28,10 @@
             <properties>
                 <profileActive>dev</profileActive>
                 <nexus.host>172.31.31.31</nexus.host>
+
+                <!--jooq生成代码-->
+                <driver>com.mysql.cj.jdbc.Driver</driver>
+                <url>jdbc:mysql://172.31.31.31:3910</url>
             </properties>
         </profile>
         <profile>
@@ -35,6 +39,10 @@
             <properties>
                 <profileActive>test</profileActive>
                 <nexus.host>192.168.0.3</nexus.host>
+
+                <!--jooq生成代码-->
+                <driver>com.mysql.cj.jdbc.Driver</driver>
+                <url>jdbc:mysql://172.31.31.31:3910</url>
             </properties>
         </profile>
         <profile>
@@ -42,6 +50,10 @@
             <properties>
                 <profileActive>prod</profileActive>
                 <nexus.host>192.168.0.3</nexus.host>
+
+                <!--jooq生成代码-->
+                <driver>com.mysql.cj.jdbc.Driver</driver>
+                <url>jdbc:mysql://172.31.31.31:3910</url>
             </properties>
         </profile>
         <!--其它临时环境-->
@@ -50,6 +62,10 @@
             <properties>
                 <profileActive>local</profileActive>
                 <nexus.host>192.168.0.3</nexus.host>
+
+                <!--jooq生成代码-->
+                <driver>com.mysql.cj.jdbc.Driver</driver>
+                <url>jdbc:mysql://192.168.0.3:3910</url>
             </properties>
         </profile>
     </profiles>
@@ -220,6 +236,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.8.1</version>
                     <configuration>
                         <maxmem>1024m</maxmem>
                         <meminitial>256m</meminitial>
@@ -234,6 +251,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-javadoc-plugin</artifactId>
+                    <version>3.2.0</version>
                     <configuration>
                         <encoding>UTF-8</encoding>
                         <!-- 显示私有变量 -->
