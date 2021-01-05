@@ -49,7 +49,7 @@
             <id>prod</id>
             <properties>
                 <profileActive>prod</profileActive>
-                <nexus.host>192.168.0.3</nexus.host>
+                <nexus.host>8.210.22.230</nexus.host>
 
                 <!--jooq生成代码-->
                 <driver>com.mysql.cj.jdbc.Driver</driver>
@@ -345,7 +345,7 @@
         </repository>
     </repositories>
 
-    <!--mavne 发布-->
+    <!--maven 发布-->
     <distributionManagement>
         <repository>
             <id>repository</id>
