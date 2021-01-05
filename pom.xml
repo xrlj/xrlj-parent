@@ -28,6 +28,7 @@
             <properties>
                 <profileActive>dev</profileActive>
                 <nexus.host>172.31.31.31</nexus.host>
+                <docker.image.tag>${project.version}-dev</docker.image.tag>
 
                 <!--jooq生成代码-->
                 <driver>com.mysql.cj.jdbc.Driver</driver>
@@ -39,6 +40,7 @@
             <properties>
                 <profileActive>test</profileActive>
                 <nexus.host>192.168.0.3</nexus.host>
+                <docker.image.tag>${project.version}-test</docker.image.tag>
 
                 <!--jooq生成代码-->
                 <driver>com.mysql.cj.jdbc.Driver</driver>
@@ -50,6 +52,7 @@
             <properties>
                 <profileActive>prod</profileActive>
                 <nexus.host>8.210.22.230</nexus.host>
+                <docker.image.tag>${project.version}-release</docker.image.tag>
 
                 <!--jooq生成代码-->
                 <driver>com.mysql.cj.jdbc.Driver</driver>
@@ -62,6 +65,7 @@
             <properties>
                 <profileActive>local</profileActive>
                 <nexus.host>192.168.0.3</nexus.host>
+                <docker.image.tag>${project.version}-local</docker.image.tag>
 
                 <!--jooq生成代码-->
                 <driver>com.mysql.cj.jdbc.Driver</driver>
@@ -300,7 +304,7 @@
                     <version>${dockerfile-maven-plugin.vesion}</version>
                     <configuration>
                         <repository>${docker.image.url}/${docker.image.prefix}/${project.artifactId}</repository>
-                        <tag>${project.version}</tag>
+                        <tag>${docker.image.tag}</tag>
                         <useMavenSettingsForAuth>true</useMavenSettingsForAuth>
                     </configuration>
                 </plugin>
