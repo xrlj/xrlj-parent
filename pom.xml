@@ -51,7 +51,7 @@
             <id>prod</id>
             <properties>
                 <profileActive>prod</profileActive>
-                <nexus.host>8.210.22.230</nexus.host>
+                <nexus.host>8.129.38.64</nexus.host>
                 <docker.image.tag>${project.version}-release</docker.image.tag>
 
                 <!--jooq生成代码-->
@@ -86,8 +86,8 @@
         <spring-cloud.version>Greenwich.SR3</spring-cloud.version>
 
         <!--<nexus.host>192.168.0.3</nexus.host>-->
-        <nexus.port>8081</nexus.port>
-        <nexus.url>http://${nexus.host}:8081</nexus.url>
+        <nexus.port>15671</nexus.port>
+        <nexus.url>http://${nexus.host}:${nexus.port}</nexus.url>
 
         <xrlj-dependencies.version>0.0.1-SNAPSHOT</xrlj-dependencies.version>
         <xrlj-java-utils.version>0.0.1-SNAPSHOT</xrlj-java-utils.version>
