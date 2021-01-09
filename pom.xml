@@ -100,7 +100,7 @@
         <logstash-logback-encoder.version>6.1</logstash-logback-encoder.version>
 
         <!--app service docker注册前缀-->
-        <docker.image.url>${nexus.host}:15671</docker.image.url>
+        <docker.image.url>${nexus.host}:15672</docker.image.url>
         <docker.image.prefix>xrlj</docker.image.prefix>
 
         <dockerfile-maven-plugin.vesion>1.4.9</dockerfile-maven-plugin.vesion>
