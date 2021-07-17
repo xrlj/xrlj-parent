@@ -30,6 +30,9 @@
                 <nexus.host>172.31.31.31</nexus.host>
                 <docker.image.tag>${project.version}-dev</docker.image.tag>
 
+                <nexus.url>http://${nexus.host}:8081</nexus.url>
+                <docker.image.url>${nexus.host}:8082</docker.image.url>
+
                 <!--jooq生成代码-->
                 <driver>com.mysql.cj.jdbc.Driver</driver>
                 <url>jdbc:mysql://172.31.31.31:3910</url>
@@ -41,6 +44,9 @@
                 <profileActive>test</profileActive>
                 <nexus.host>192.168.0.3</nexus.host>
                 <docker.image.tag>${project.version}-test</docker.image.tag>
+
+                <nexus.url>http://${nexus.host}:8081</nexus.url>
+                <docker.image.url>${nexus.host}:8082</docker.image.url>
 
                 <!--jooq生成代码-->
                 <driver>com.mysql.cj.jdbc.Driver</driver>
@@ -54,6 +60,9 @@
                 <nexus.host>8.129.38.64</nexus.host>
                 <docker.image.tag>${project.version}-release</docker.image.tag>
 
+                <nexus.url>http://${nexus.host}:8081</nexus.url>
+                <docker.image.url>${nexus.host}:8082</docker.image.url>
+
                 <!--jooq生成代码-->
                 <driver>com.mysql.cj.jdbc.Driver</driver>
                 <url>jdbc:mysql://172.31.31.31:3910</url>
@@ -66,6 +75,9 @@
                 <profileActive>local</profileActive>
                 <nexus.host>192.168.0.3</nexus.host>
                 <docker.image.tag>${project.version}-local</docker.image.tag>
+
+                <nexus.url>http://${nexus.host}:8081</nexus.url>
+                <docker.image.url>${nexus.host}:8082</docker.image.url>
 
                 <!--jooq生成代码-->
                 <driver>com.mysql.cj.jdbc.Driver</driver>
@@ -85,10 +97,6 @@
         <!--spring-cloud版本-->
         <spring-cloud.version>Greenwich.SR3</spring-cloud.version>
 
-        <!--<nexus.host>192.168.0.3</nexus.host>-->
-        <nexus.port>15671</nexus.port>
-        <nexus.url>http://${nexus.host}:${nexus.port}</nexus.url>
-
         <xrlj-dependencies.version>0.0.1-SNAPSHOT</xrlj-dependencies.version>
         <xrlj-java-utils.version>0.0.1-SNAPSHOT</xrlj-java-utils.version>
         <xrlj-infrastructure.version>0.0.1-SNAPSHOT</xrlj-infrastructure.version>
@@ -100,7 +108,6 @@
         <logstash-logback-encoder.version>6.1</logstash-logback-encoder.version>
 
         <!--app service docker注册前缀-->
-        <docker.image.url>${nexus.host}:15672</docker.image.url>
         <docker.image.prefix>xrlj</docker.image.prefix>
 
         <dockerfile-maven-plugin.vesion>1.4.9</dockerfile-maven-plugin.vesion>
@@ -347,7 +354,36 @@
             <name>Spring Milestones</name>
             <url>https://repo.spring.io/milestone</url>
         </repository>
+
+        <!--自己私仓,下载jar-->
+        <repository>
+            <id>public</id>
+            <name>maven-public</name>
+            <url>${nexus.url}/repository/maven-public/</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+
     </repositories>
+
+    <pluginRepositories>
+        <!--私服，插件-->
+        <pluginRepository>
+            <id>public</id>
+            <name>ymu nexus</name>
+            <url>${nexus.url}/repository/maven-public/</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </pluginRepository>
+    </pluginRepositories>
 
     <!--maven 发布-->
     <distributionManagement>
