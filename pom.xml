@@ -94,6 +94,9 @@
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
 
+        <!--Apache Log4j 2.x <= 2.14.1 有远程执行漏洞-->
+        <log4j2.version>2.15.0</log4j2.version>
+
         <!--spring-cloud版本-->
         <spring-cloud.version>Greenwich.SR3</spring-cloud.version>
 
