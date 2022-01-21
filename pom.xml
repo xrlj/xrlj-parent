@@ -352,11 +352,11 @@
     </build>
 
     <repositories>
-        <!--<repository>
+        <repository>
             <id>spring-milestones</id>
             <name>Spring Milestones</name>
             <url>https://repo.spring.io/milestone</url>
-        </repository>-->
+        </repository>
 
         <!--自己私仓,下载jar-->
         <repository>
@@ -377,7 +377,7 @@
         <!--私服，插件-->
         <pluginRepository>
             <id>public</id>
-            <name>ymu nexus</name>
+            <name>maven-public</name>
             <url>${nexus.url}/repository/maven-public/</url>
             <snapshots>
                 <enabled>true</enabled>
